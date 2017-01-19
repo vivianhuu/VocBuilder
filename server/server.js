@@ -32,7 +32,7 @@ mongoose.connect('mongodb://localhost/E-study', options, function (err, res){
 
 //referred files in components, module files in client
 app.use(express.static(path.join(__dirname, '../client')));
-app.use(express.static(path.join(__dirname, '../components')));
+app.use(express.static(path.join(__dirname, '../node_modules')));
 //template html files, for res.render()
 app.set('views', path.join(__dirname, '../client/views'));
 app.engine('html', require('ejs').renderFile);
