@@ -1,0 +1,16 @@
+<div class="container-fluid">
+	<div class="row center-block">
+		<div class="col-sm-12">
+			<h3>{{singleWord.word}}</h3>
+			<hr>
+			<div ng-repeat='c1 in singleWord.atts'>
+				<h4>{{c1}}</h4>
+			</div>
+			<div style="display: inline-block; vertical-align: right">
+				<a class="btn btn-info" ui-sref="userIndex.cw.edit({username: username, id: singleWord.id})">Edit</a>
+				<button class="btn btn-danger" ng-click="remove()">Delete</button>
+				<a class="btn btn-success" ui-sref="userIndex.cw({username: username})">Back</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container container-sm animated fadeInDown ng-scope">
+	<div class="center-block">
+		<h1 align="center">E-study</h1>
+		<div class="panel col-md-offset-2">
+			<div class="panel-body">
+				<p class="pv text-bold">Login Credentials</p>
+				<form class="form" name="form" ng-submit='login()' novalidate=''>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="form-group has-feedback mb">
+								<input class="form-control" type="email" name="email" placeholder="Your email" ng-model='user.email'>
+								<span class="fa fa-envelop form-control-feedback text-muted"></span>
+							</div>
+							<br>
+							<div class="form-group has-feedback">
+								<input class="form-control" type="password" name="password" placeholder="Your password" ng-model='user.password'>
+								<span class="fa fa-lock form-control-feedback text-muted"></span>
+							</div>
+							<div class="form-group has-error">
+								<p class="help-block">{{errors.other}}</p>
+							</div>
+							<div class="checkbox c-checkbox pull-left mt0">
+								<label>
+									<input type="checkbox" id="remember">
+									<span class="fa fa-check"></span>Remember me
+								</label>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<button class="btn btn-block btn-info mb" type="submit"><strong>Login</strong></button>
+							<p class="text-muted mb0">Don't have an account yet?</p> 
+							<a ui-sref="signup" class="btn btn-block btn-default">
+								<strong>Sign up</strong>
+							</a>
+						</div>
+					</div>	
+				</form>
+			</div>	
+		</div>
+		<div class="text-center mt">
+			<a ui-sref="recover" class="text-muted">Forgot your password?</a>
+		</div>
+		<div ng-include="'../app/components/partials/footer.html'" class="p-lg text-center ng-scope"></div>
+	</div>
+</div>

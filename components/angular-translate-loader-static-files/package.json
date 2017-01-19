@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-translate-loader-static-files",
+        "scope": null,
+        "escapedName": "angular-translate-loader-static-files",
+        "name": "angular-translate-loader-static-files",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/vivian/Desktop/E-study"
+    ]
+  ],
+  "_from": "angular-translate-loader-static-files@latest",
+  "_id": "angular-translate-loader-static-files@2.13.0",
+  "_inCache": true,
+  "_location": "/angular-translate-loader-static-files",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular-translate-loader-static-files-2.13.0.tgz_1477860051185_0.05048820236697793"
+  },
+  "_npmUser": {
+    "name": "knalli",
+    "email": "knallisworld@googlemail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-translate-loader-static-files",
+    "scope": null,
+    "escapedName": "angular-translate-loader-static-files",
+    "name": "angular-translate-loader-static-files",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-translate-loader-static-files/-/angular-translate-loader-static-files-2.13.0.tgz",
+  "_shasum": "e76b56be4647be3594b3a4aaaabdc3ef0ada11f7",
+  "_shrinkwrap": null,
+  "_spec": "angular-translate-loader-static-files",
+  "_where": "/Users/vivian/Desktop/E-study",
+  "author": {
+    "name": "Pascal Precht"
+  },
+  "bugs": {
+    "url": "https://github.com/angular-translate/angular-translate/issues"
+  },
+  "dependencies": {
+    "angular-translate": "~2.13.0"
+  },
+  "description": "Creates a loading function for a typical static file url pattern: \"lang-en_US.json\", \"lang-de_DE.json\", etc. Using this builder, the response of these urls must be an object of key-value pairs.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "e76b56be4647be3594b3a4aaaabdc3ef0ada11f7",
+    "tarball": "https://registry.npmjs.org/angular-translate-loader-static-files/-/angular-translate-loader-static-files-2.13.0.tgz"
+  },
+  "gitHead": "cdf309251cae5c671940784e432fc514fc477fe3",
+  "homepage": "https://angular-translate.github.io",
+  "keywords": [
+    "angular",
+    "translate",
+    "loader"
+  ],
+  "license": "MIT",
+  "main": "angular-translate-loader-static-files.js",
+  "maintainers": [
+    {
+      "name": "mchambaud",
+      "email": "mchambaud@gmail.com"
+    },
+    {
+      "name": "knalli",
+      "email": "knallisworld@googlemail.com"
+    }
+  ],
+  "name": "angular-translate-loader-static-files",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-translate/bower-angular-translate-loader-static-files.git"
+  },
+  "scripts": {},
+  "version": "2.13.0"
+}

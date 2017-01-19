@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row center-block">
+    	<div class="panel panel-default">
+  			<!-- Default panel contents -->
+  			<div class="panel-heading">
+          		<h3>All posts are here!</h3>
+        	</div>
+  			<div class="panel-body">
+    			<p>Just click the title of the post that you wanna modify, or see the detail.</p>
+  			</div>
+
+ 		 	<!-- Table -->
+  			<table class="table">
+    			<thead>
+    				<tr>
+    					<th>#</th>
+    					<th>Title</th>
+    					<th>Author</th>
+    					<th>Post Date</th>
+    				</tr>
+    			</thead>
+    			<!-- <tbody ng-show="ad">
+    				<tr ng-repeat='item in things'>
+    					<td>{{item.num}}</td>
+    					<td><a ui-sref="adminIndex.dashboard.singlePost({username: username, id: item.id})">{{item.title}}</a></td>
+    					<td>{{item.author}}</td>
+    					<td>{{item.date}}</td>
+    				</tr>
+    			</tbody> -->
+    			<tbody>
+    				<tr ng-repeat='item in things'>
+    					<td><input type="checkbox" ng-model="item.checked"></td>
+    					<td><a ui-sref="adminIndex.dashboard.singlePost({username: username, id: item.id})">{{item.title}}</a></td>
+    					<td>{{item.author}}</td>
+    					<td>{{item.date}}</td>
+    				</tr>
+    			</tbody>
+  			</table>
+		</div>
+		<!-- <div ng-show="ad">
+			<button class="btn btn-info pull-right" ng-click="ad=!ad">Delete</button>
+		</div> -->
+		<div style="display: inline-block; vertical-aligh: right">
+			<button class="btn btn-danger" ng-click="remove()">Delete</button>
+			<button class="btn btn-info" ng-click="reset()" ng-show='item.checked'>Cancel</button>
+		</div>
+		<div class="help-block">
+			<p>{{message}}</p>
+		</div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en" >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<base href="/"></base>
+	<title>E-study</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<script src="https://use.fontawesome.com/dc1a49cbe8.js"></script>
+	<link rel="stylesheet" type="text/css" href="angular-loading-bar/build/loading-bar.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="app.less">
+	<!-- <link rel="stylesheet" type="text/css" href="app/_naut/less/styles.less"> -->
+
+</head>
+<body ng-app="VocBuilder" ng-clok="" ng-controller="mainCtrl" ng-class="{'layout-fixed': app.layout.isFixed,
+											 'layout-boxed': app.layout.isBoxed,
+											 'layout-dock': app.layout.isDocked,
+											 'layout-material': app.layout.isMaterial,
+											 'aside-offscreen': app.sidebar.isOffscreen,
+											 'footer-hidden': app.footer.hidden,
+											 'aside-mini': app.sidebar.isMini,
+											 'aside-right': app.sidebar.isRight,
+											 'in-app': !$state.includes('page')}">
+	<div id="main">
+		<div id="topbar" class="topbar" style="width: auto;">
+			<div class="fill">
+				<div class="container">
+					<h1 style="align: center;">VocBuilder, an app for English self study</h1>
+				</div>
+			</div>
+		</div>
+		<main ui-view data-autoscroll="false" class="app-container ng-scope"></main>
+	</div>
+	<!-- <div ng-include="'app/components/partials/settings.html'" ng-class="{'visible': showSettings}" ng-init="showSettings = false" class="settings-wrapper"></div> -->
+	<!-- <div class="layer-morph-overlay">
+	  	<div class="layer-morph-inner bg-info"></div>
+	</div>
+	<div class="layer-morph-close" layer-morph-close="">
+	  	<em class="icon-cross"></em>
+	</div>
+	<div class="layer-morph-container bg-info">
+	  	<div class="layer-morph-wrapper">
+	  		<div id="layer-search" ng-include="app/components/partials/layer-search.html" class="layer-morph"></div>
+	  		<div class="layer-morph-footer" align="center">E-study</div>
+	  	</div>
+	</div> -->
+	<script src="jquery/dist/jquery.js"></script>
+	<script src="angular/angular.js"></script>
+	<script src="angular-loading-bar/build/loading-bar.js"></script>
+	<script src="angular-translate/dist/angular-translate.js"></script>
+	<script src="angular-translate/dist/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+	<script src="angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="angular-route/angular-route.js"></script>
+    <script src="angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="angular-cookies/angular-cookies.js"></script>
+	<script src="angularjs-toaster/toaster.js"></script>
+	<script src="angular-translate-loader-url/angular-translate-loader-url.js"></script>
+	<script src="angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="angular-translate-storage-local/angular-translate-storage-local.js"></script>
+	<script src="angular-animate/angular-animate.js"></script>
+	<script src="angular-ui-scroll/dist/ui-scroll.js"></script>
+	<script src="angular-ui-scrollpoint/dist/scrollpoint.js"></script>
+	<script src="angular-ui-event/dist/event.js"></script>
+	<script src="angular-ui-mask/dist/mask.js"></script>
+	<script src="angular-ui-validate/dist/validate.js"></script>
+	<script src="angular-ui-indeterminate/dist/indeterminate.js"></script>
+	<script src="angular-ui-uploader/dist/uploader.js"></script>
+	<script src="angular-ui-utils/modules/utils.js"></script>
+	<script src="angular-ui-utils/modules/format/format.js"></script>
+	<script src="angular-ui-utils/modules/highlight/highlight.js"></script>
+	<script src="angular-ui-utils/modules/include/include.js"></script>
+	<script src="angular-ui-utils/modules/inflector/inflector.js"></script>
+	<script src="angular-ui-utils/modules/jq/jq.js"></script>
+	<script src="angular-ui-utils/modules/scrollfix/scrollfix.js"></script>
+	<script src="angular-ui-utils/modules/scroll/scroll-jqlite.js"></script>
+	<script src="angular-ui-utils/modules/keypress/keypress.js"></script>
+	<script src="angular-ui-utils/modules/reset/reset.js"></script>
+	<script src="angular-ui-utils/modules/route/route.js"></script>
+	<script src="angular-ui-utils/modules/showhide/showhide.js"></script>
+	<script src="angular-ui-utils/modules/unique/unique.js"></script>
+	<script src="ngstorage/ngStorage.js"></script>
+	<script src="angular-touch/angular-touch.js"></script>
+	<script src="angular-resource/angular-resource.js"></script>
+	<script src="angular-sanitize/angular-sanitize.js"></script>
+	<script src="modernizr/modernizr.custom.js"></script>
+    <!-- <script src="oclazyload/dist/ocLazyLoad.js"></script> -->
+	<script src="js/app.js"></script>
+	<script src="js/app.services.js"></script>
+	<script src="js/app.directives.js"></script> 
+	<script src="modules/user/user.module.js"></script>
+	<script src="modules/admin/admin.module.js"></script>
+	<script src="modules/user/js/user.controllers.js"></script>
+	<script src="modules/user/js/user.directives.js"></script>
+	<script src="modules/admin/js/admin.controllers.js"></script>
+	<script src="modules/admin/js/admin.services.js"></script>
+</body>
+</html>

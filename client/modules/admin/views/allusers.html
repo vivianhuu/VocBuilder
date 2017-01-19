@@ -1,0 +1,31 @@
+<div class="container-fluid">
+	<div class="row center-block">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Get to know the popularity of the app~</h3>
+			</div>
+			<div class="panel-body">
+				<p>Just click the username to view his or her profile.</p>
+			</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<td>#</td>
+						<td>Username</td>
+						<td>Email</td>
+						<td>Register Date</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="user in users">
+						<td>{{user.num}}</td>
+						<td><a ui-sref="adminIndex.users.oneuser({username: username, id: user._id})">{{user.username}}</a></td>
+						<td>{{user.email}}</td>
+						<td>{{user.date}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="btn btn-info pull-right" ui-sref="adminIndex.users.newuser({username: username})">Create user</a>
+		</div>
+	</div>
+</div>

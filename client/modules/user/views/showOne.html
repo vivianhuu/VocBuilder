@@ -1,0 +1,19 @@
+<div class="container-fluid">
+	<div class="row center-block">
+		<div class="col-sm-12">
+			<h1>{{singlePost.title}}</h1>
+			<h5>By: {{singlePost.author}} | {{singlePost.date}}</h5>
+			<div ng-repeat='item in singlePost.contents' ng-show='showWord'>
+				<p>{{item.word}}</p>
+				<p ng-repeat='c1 in item.atts'>{{c1}}</p>
+				<!-- <p>e.g.&nbsp;{{item.sample}}</p> -->
+				<button class="btn btn-info pull-right" ng-click='addWord(item)'>Add to My Wordlist</button>
+			</div>
+			<div ng-show='!showWord'>
+			    <p><strong>{{sentence}</strong></p>
+				<button class="btn btn-info pull-right" ng-click='addSentence(sentence)'>Add to My Sentences</button>
+			</div>
+			<button class="btn btn-info pull-right" ng-click='userIndex.dashboard({username: username})'>Back</button>
+		</div>
+	</div>
+</div>

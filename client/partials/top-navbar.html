@@ -1,0 +1,47 @@
+<nav class="nav navbar topnavbar" role='navigation' ng-controller="NavbarCtrl">
+	<div class="btn-offset">
+		<button type="button" btn-layer-morph="" target='#layer-search' ripple="" class="btn btn-info btn-circle btn-lg shadow-z1">
+			<em class="fa fa-search"></em>
+			<span class="ripple"></span>
+		</button>
+	</div>
+	<div class="navbar-header">
+		<a class="navbar-brand" ui-sref="userIndex.dashboard">
+			<img class="brand-logo" src="assets/img/logo.png" alt="App Logo">
+		</a>
+		<div class="mobile-toggles">
+			<a href="" ng-click="app.sidebar.isOffscreen = !app.sidebar.isOffscreen" class="sidebar-toggle">
+				<em class="fa fa-navicon"></em>
+			</a>
+			<a href="" ng-click="toggleHeaderMenu()" class="menu-toggle hidden-material">
+				<em class="fa fa-ellipsis-v fa-fw"></em>
+			</a>
+		</div>
+	</div>
+	<div class="nav-wrapper collapse navbar-collapse" uib-collapse="headerMenuCollapsed">
+		<ul class="nav navbar-nav hidden-material">
+			<li>
+				<a href="" ng-click="app.sidebar.isOffscreen=!app.sidebar.isOffscreen" class="hidden-xs">
+					<em class="fa fa-craet-left" ng-class="app.sidebar.isOffscreen ? 'fa-caret-right':'fa-caret-left'"></em>
+				</a>
+			</li>
+			<li ng-class='{active: isActive("/settings")}'>
+				<a href="/settings">
+					<span class="fa fa-cog"></span>
+				</a>
+			</li>
+		</ul>
+		<ul class="nav nabar-nav navbar-right">
+      		<li>
+				<a href="" ng-click='logout()'>Log out</a>
+			</li>
+      	</ul>
+		<form class="navbar-form navbar-right">
+        	<div class="form-group">
+          		<input type="text" class="form-control" placeholder="Search">
+        	</div>
+        	<button type="submit" class="btn btn-default">Submit</button>
+      	</form>
+      	
+	</div>
+</nav>

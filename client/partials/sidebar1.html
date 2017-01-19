@@ -1,0 +1,74 @@
+<div class="sidebar-wrapper">
+	<div class="sidebar" ui-sidebar="">
+		<div class="sidebar-nav">
+			<ul class="nav">
+				<li class="nav-heading">
+					<span class="text-muted" translate='sidebar.heading.HEADER'>Main Navigation</span>
+				</li>
+				<li ng-class="{active: $state.includes('adminIndex')}">
+					<a ui-sref="adminIndex.dashboard({username: username})" title="Dashboard" ripple=''>
+						<!-- <div class="label pull-right label-success">{{newP.num}}</div> -->
+						<em class="sidebar-item-icon fa fa-angle-right"></em>
+						<em class="sidebar-item-icon icon-book"></em>
+						<span class="ng-scope">All Posts</span>
+						<span class="ripple"></span>
+					</a>
+				</li>
+				<li ng-class="{active: $state.includes('adminIndex.newPost')}">
+					<a ui-sref="adminIndex.newPost({username: username})" title="newPost" ripple="">
+						<!-- <div class="label pull-right label-success">{{words.num}}</div> -->
+						<em class="sidebar-item-icon fa fa-angle-right"></em>
+						<em class="sidebar-item-icon icon-pencil"></em>
+						<span class="ng-scope">New Post</span>
+						<span class="ripple"></span>
+					</a>
+				</li>
+				<li ng-class="{active: $state.includes('adminIndex.users)}">
+					<a ui-sref="adminIndex.users({username: username})" title="allusers" ripple>
+						<div class="label pull-right label-success">{{sentenses.num}}</div>
+						<em class="sidebar-item-icon fa fa-angle-right"></em>
+						<em class="sidebar-item-icon icon-user"></em>
+						<span class="ng-scope">All users</span>
+						<span class="ripple"></span>
+					</a>
+				</li>
+				<li ng-class="{active: $state.includes('adminIndex.settings')}">
+					<a href title="settings" ripple>
+						<em class="sidebar-item-icon icon-cog"></em>
+						<span>Settings</span>
+						<span class="ripple"></span>
+					</a>
+					<ul class="nav sidebar-subnav">
+						<li class="sidebar-subnav-header">
+							<a>
+								<em class="sidebar-item-icon fa fa-angle-right"></em>
+								"Settings"
+							</a>
+						</li>
+						<li ui-sref-active="active">
+							<a ui-sref="adminIndex.settings.pi({username: username})" title="personalInfo" ripple>
+								<em class="sidebar-item-icon"></em>
+								<span class="ng-scope">Personal Info</span>
+								<span class="ripple"></span>
+							</a>
+						</li>
+						<!-- <li ui-sref-active="active">
+							<a ui-sref="adminIndex.settings.personalImg" title="personalImg" ripple>
+								<em class="sidebar-item-icon"></em>
+								<span class="ng-scope">Personal Image</span>
+								<span class="ripple"></span>
+							</a>
+						</li> -->
+						<li ui-sref-active="active">
+							<a ui-sref="adminIndex.settings.cp({username: username})" title="changePwd" ripple>
+								<em class="sidebar-item-icon"></em>
+								<span class="ng-scope">Change password</span>
+								<span class="ripple"></span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

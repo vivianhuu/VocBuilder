@@ -1,0 +1,35 @@
+<div class="container-fluid">
+	<div class="row center-block">
+		<div class="panel panel-default">
+  			<!-- Default panel contents -->
+  			<div class="panel-heading">My Wordlist</div>
+  			<div class="panel-body">
+    			<p ng-show='some'>Just click the word and see the detailed infomation. You can update or delete words here. Learn something new? Add a new world!</p>
+          <p ng-show='!some'>Click "Add a new word" button below to start adding words to yout list.</p>
+  			</div>
+
+ 		 	<!-- Table -->
+  			<table class="table">
+    			<thead>
+    				<tr>
+    					<th>#</th>
+    					<th>Word</th>
+    					<th>Date Collected</th>
+    				</tr>
+    			</thead>
+          <tbody>
+            <tr ng-repeat='item in words'>
+              <td><input type="checkbox" ng-model="item.checked"></td>
+              <td>{{item.word}}</td>
+              <td>{{item.date}}</td>
+            </tr>
+          </tbody>
+  			</table>
+        <div style="display: inline-block; vertical-align: right">
+          <a class="btn btn-info" ng-click='userIndex.cw.add({username: username})'>Add a new word</a>
+          <button class="btn btn-danger" ng-click="remove()">Delete</button>
+          <button class="btn btn-info" ng-click="reset()">Cancel</button>
+        </div>
+		</div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<header ng-include="'partials/top-navbar.html'" ng-controller="app.theme.topbar" class="ng-scope bg-warning">
+</header>
+<aside ng-include="'partials/sidebar1.html'" ng-controller="sidebar1Controller" ng-class="app.theme.sidebar" class="ng-scope bg-white">
+</aside>
+<section class="ng-scope">
+	<div ui-view autoscroll="false" ng-class="app.views.animation" class="app ng-scope ng-fadeInLeft2"></div>
+</section>
+<footer ng-include="'partials/footer.html'" class="ng-scope"></footer>

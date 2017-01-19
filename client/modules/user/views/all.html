@@ -1,0 +1,36 @@
+<div class="container-fluid" ng-controller='dashboardController'>
+    <div class="row center-block">
+    	<div class="panel panel-default">
+  			<!-- Default panel contents -->
+  			<div class="panel-heading">
+          <h3>What's new!</h3>
+        </div>
+  			<div class="panel-body">
+    			<p>You can click the title you are interested in, and collect those words or sentences you like.</p>
+  			</div>
+
+ 		 	<!-- Table -->
+  			<table class="table">
+    			<thead>
+    				<tr>
+    					<th>#</th>
+    					<th>Title</th>
+    					<th>Author</th>
+    					<th>Post Date</th>
+    				</tr>
+    			</thead>
+    			<tbody>
+    				<tr ng-repeat='item in things'>
+    					<td>{{item.num}}</td>
+    					<td><a ui-sref="userIndex.dashboard.showOne({username: username, id: item.id})">{{item.title}}</a></td>
+    					<td>{{item.author}}</td>
+    					<td>{{item.date}}</td>
+    				</tr>
+    			</tbody>
+  			</table>
+		</div>
+		<div class="help-block">
+			<p>{{message}}</p>
+		</div>
+  </div>
+</div>

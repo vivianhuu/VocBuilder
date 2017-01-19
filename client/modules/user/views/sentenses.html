@@ -1,0 +1,38 @@
+<div class="container-fluid">
+	<div class="row center-block">
+		<div class="panel panel-default">
+  			<!-- Default panel contents -->
+  			<div class="panel-heading">My Sentences</div>
+  			<div class="panel-body">
+    			<p ng-show='some'>Just click the sentence and see the detailed infomation. You can update or delete sentences here. Learn something new? Add a new sentence!</p>
+          <p ng-show='!some'>Click "Add a new sentence" button below to start adding sentences to yout list.</p>
+  			</div>
+
+ 		 	<!-- Table -->
+  			<table class="table">
+    			<thead>
+    				<tr>
+    					<th>#</th>
+    					<th>Sentence</th>
+    					<th>Date Collected</th>
+    				</tr>
+    			</thead>
+          <tbody>
+            <tr ng-repeat='item in sentences'>
+              <td><input type="checkbox" ng-model="item.checked"></td>
+              <td>{{item.sentence}}</td>
+              <td>{{item.date}}</td>
+            </tr>
+          </tbody>
+  			</table>
+        <div style="display: inline-block; vertical-align: right">
+          <a class="btn btn-info" ui-sref='userIndex.cs.add({username: username})'>Add a new sentence</a>
+          <button class="btn btn-danger pull-right" ng-click="remove()">Delete</button>
+          <button class="btn btn-info" ng-click="reset()">Cancel</button>
+        </div>     
+		</div>
+		<div class="help-block">
+			<p>{{message}}</p>
+		</div>
+  </div>
+</div>

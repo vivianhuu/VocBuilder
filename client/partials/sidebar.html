@@ -1,0 +1,68 @@
+<div class="sidebar-wrapper">
+	<div class="sidebar" ui-sidebar="">
+		<div class="sidebar-nav">
+			<ul class="nav">
+				<li class="nav-heading">
+					<span class="text-muted" translate='sidebar.heading.HEADER'>Main Navigation</span>
+				</li>
+				<li ng-class="{active: $state.includes('userIndex')}">
+					<a ui-sref="userIndex.dashboard({username: username})" title="Dashboard" ripple=''>
+						<!-- <div class="label pull-right label-success">{{newP.num}}</div> -->
+						<em class="sidebar-item-icon fa fa-angle-right"></em>
+						<em class="sidebar-item-icon icon-stack"></em>
+						<span class="ng-scope">What's new</span>
+						<span class="ripple"></span>
+					</a>
+				</li>
+				<li ng-class="{active: $state.includes('userIndex.cw')}">
+					<a ui-sref="userIndex.cw({username: username})" title="collectedWords" ripple="">
+						<!-- <div class="label pull-right label-success">{{words.num}}</div> -->
+						<em class="sidebar-item-icon fa fa-angle-right"></em>
+						<em class="sidebar-item-icon icon-layout"></em>
+						<span class="ng-scope">My wordlist</span>
+						<span class="ripple"></span>
+					</a>
+				</li>
+				<li ng-class="{active: $state.includes('userIndex.cs')}">
+					<a ui-sref="userIndex.cs({username: username})" title="collectedSentenses" ripple>
+						<!-- <div class="label pull-right label-success">{{sentenses.num}}</div> -->
+						<em class="sidebar-item-icon fa fa-angle-right"></em>
+						<em class="sidebar-item-icon icon-layout"></em>
+						<span class="ng-scope">My sentences</span>
+						<span class="ripple"></span>
+					</a>
+				</li>
+				<li ng-class="{active: $state.includes('userIndex.settings')}">
+					<a href title="settings" ripple>
+						<em class="sidebar-item-icon fa fa-angle-right"></em>
+						<span>Settings</span>
+						<span class="ripple"></span>
+					</a>
+					<ul class="nav sidebar-subnav">
+						<li ui-sref-active="active">
+							<a ui-sref="userIndex.settings.pi({username: username})" title="personalInfo" ripple>
+								<em class="sidebar-item-icon"></em>
+								<span class="ng-scope">Personal Info</span>
+								<span class="ripple"></span>
+							</a>
+						</li>
+						<!-- <li ui-sref-active="active">
+							<a ui-sref="userIndex.settings.personalImg" title="personalImg" ripple>
+								<em class="sidebar-item-icon"></em>
+								<span class="ng-scope">Personal Image</span>
+								<span class="ripple"></span>
+							</a>
+						</li> -->
+						<li ui-sref-active="active">
+							<a ui-sref="userIndex.settings.cp({username: username})" title="changePwd" ripple>
+								<em class="sidebar-item-icon"></em>
+								<span class="ng-scope">Change password</span>
+								<span class="ripple"></span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

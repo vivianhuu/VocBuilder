@@ -1,0 +1,26 @@
+<div class="container-fluid">
+	<div class="row center-block">
+		<div class="col-sm-12">
+			<form class="form-horizontal" name="newwordform">
+				<div class="form-group">
+					<label class="control-label">Sentence:</label>
+					<div class="col-xs-6">
+						<textarea class="form-control" ng-model="ns.sentence" required></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Notes:</label>
+					<div class="col-xs-8">
+						<textarea class="form-control" ng-model="note" placeholder="If you have any notes, you can type here and click 'save to notes'. You can add multiple notes."></textarea>
+						<button class="btn btn-info pull-right" ng-click='save()'>Save to notes</button>
+						<div ng-repeat='item in ns.notes'>{{item.contents}}</div>
+					</div>
+				</div>
+				<div class="form-group" style="display: inline-block; vertical-align: right">
+					<button class="btn btn-info" ng-click='create(ns)'>Create</button>
+					<a class="btn btn-success" ui-sref='userIndex.cs({username: username})'>Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

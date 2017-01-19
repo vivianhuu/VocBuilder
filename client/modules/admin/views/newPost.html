@@ -1,0 +1,74 @@
+<div class="container-fluid">
+	<div class="row center-block">
+		<div class="col-sm-12">
+			<select ng-model="np.tag">
+				<option value="">-- please select --</option>
+				<option value="word">Words</option>
+				<option value="sentence">Sentences</option>
+			</select>
+			<form class="form" name="npwform" ng-show="ng.tag == 'word' ">
+				<div class="form-group col-sm-10">
+					<label class="control-label">Title:</label>
+					<input type="text" class="form-control" ng-model='np.title' required>
+				</div>
+				<hr>
+				<div class="form-group col-sm-10">
+					<label class="control-label">Content:</label><br>
+					<div class="col-sm-8">
+						<label class="control-label">Word:</label>
+						<input class="form-control" type="text" ng-model='nw.word' required>
+					</div>
+					<div class="col-sm-8">
+						<label class="control-label">Attributes &amp; Meanings &amp; Sample sentences:</label><br>
+						<a ng-click='more()' class="btn btn-default">
+							<i class="fa fa-plus-square" aria-hidden="true"></i>
+						</a>
+						<span>
+							<textarea class="form-control" rows="3" ng-model="att" placehodler="type here" required></textarea>
+						</span>
+							<!-- <input type="text" class="form-control" ng-model="att" required placeholder="attribute and meanging here"> -->
+							<!-- <button class="btn btn-info pull-right" ng-click='more()'>More attributes</button> -->
+						<hr> 
+						<div>
+							<div ng-repeat='item in nw.atts'>
+								<a ng-click="removeAtt(item)" class="btn btn-danger" aria-label="Delete">
+									<i class="fa fa-minus-circle" aria-hidden="true"></i>
+								</a>
+								<span>
+									<p>{{item}}</p>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-10">
+					<button class="btn btn-info pull-right" ng-click="morew()">More words</button>
+					<hr>
+					<div ng-repeat='item in nws'>{{item.word}}&npsb;&npsb;&npsb;...</div>
+				</div>
+				<hr>
+				<div class="form-group col-sm-10" style="display: inline-block; vertical-align: right">
+					<button class="btn btn-info" ng-click='addnpw()'>Create</button>
+					<a class="btn btn-success" ui-sref='adminIndex.newPost({username: username})'>Cancel</a>
+				</div>
+			</form>
+			<form class="form" name="npsform" ng-show="ng.tag == 'sentence'">
+				<div class="form-group col-sm-10">
+					<label class="control-label">Title:</label>
+					<input type="text" class="form-control" ng-model='np.title' required>
+				</div>
+				<div class="form-group col-sm-10">
+					<label class="control-label">Content:</label>
+					<div class="col-sm-9">
+						<label class="control-label">Sentence:</label>
+						<textarea rows="3" ng-model="ns" placehodler="sentence" required></textarea>
+					</div>
+				</div>
+				<div class="form-group col-sm-10" style="display: inline-block; vertical-align: right">
+					<button class="btn btn-info" ng-click='addnps()'>Create</button>
+					<a class="btn btn-success" ui-sref='adminIndex.newPost({username: username})'>Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

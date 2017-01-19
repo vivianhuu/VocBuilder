@@ -1,0 +1,25 @@
+<div class="container-fluid">
+	<div class="row center-block">
+		<div class="col-sm-12">
+			<form>
+				<div class="form-group">
+					<input type="text" ng-model='word.word'>
+				</div>
+				<div class="form-group">
+					<div ng-repeat='c1 in word.atts'>
+						<label class="control-label">Attributes &amp; Meanings &amp; Sample sentences:</label>
+						<textarea rows="3" ng-model='c1'></textarea>
+					</div>	
+				</div>
+				<div class="form-group">
+					<label class="control-label">New Attribute:</label>
+					<textarea rows="3" ng-model='na'></textarea>
+				</div>
+				<div style="display: inline-block; vertical-align: right">
+					<button class="btn btn-info" ng-click="updateWord()">Update</button>
+					<a class="btn btn-success" ui-sref='userIndex.cw.showOne({username: username, id: word.id})'>Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="nav navbar topnavbar" role='navigation' ng-controller="headerNavController">
+	<div class="btn-offset">
+		<button class="btn btn-info btn-circle btn-lg shadow-z1" type="button" btn-layer-morph="" target="#layer-search" ripple="">
+			<em class="fa fa-search"></em>
+		</button>
+	</div>
+	<div class="navbar-header" ng-class='app.theme.brand'>
+		<a class="navbar-brand" ui-sref="app.dashboard">
+			<img class="brand-logo" src="assets/img/logo.png" alt="App Logo">
+		</a>
+		<div class="mobile-toggles">
+			<a href="" ng-click="toggleHeaderMenu()" class="menu-toggle pull-left">
+				<em class="fa fa-navicon fa-fw"></em>
+			</a>
+		</div>
+	</div>
+	<div class="nav-wrapper collapse navbar-collapse" collapse="headerMenuCollapsed">
+		<ul class="nav navbar-nav">
+			<li>
+				<a href="#/">Back</a>
+			</li>
+			<li class="dropdown" uib-dropdown="">
+				<a class="dropdown-toggle" href="" uib-dropdown-toggle="">Dropdown</a>
+				<ul class="dropdown-menu bg-white">
+					<li>
+						<a href="">Sub menu1</a>
+					</li>
+					<li>
+						<a href="">Sub menu2</a>
+					</li>
+					<li>
+						<a href="">Sub menu3</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
